@@ -24,4 +24,9 @@ public class menu_screen extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void creditCardBttn(View view) {
+        Intent intent = new Intent(this,credit_cards.class);
+        startActivity(intent);
+    }
+
 }

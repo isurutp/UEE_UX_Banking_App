@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OpenMessage"></activity>
+        <activity android:name=".OpenMessage"/>
         <activity android:name=".ViewMessages" />
         <activity android:name=".MessageSent" />
         <activity android:name=".ComposeMessage" />
@@ -17,12 +17,13 @@
         <activity android:name=".Register" />
         <activity android:name=".LoginDetailsMessage" />
         <activity android:name=".ForgotPassword" />
+
+        <activity android:name=".credit_cards"/>
         <activity android:name=".menu_screen" />
-        <activity android:name=".sms_verification" />
+        <activity android:name=".sms_verification"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
