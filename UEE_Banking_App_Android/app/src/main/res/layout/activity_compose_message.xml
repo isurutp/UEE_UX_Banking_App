@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/creditCardNo"
         android:layout_width="155dp"
         android:layout_height="19dp"
         android:background="@android:color/background_light"
@@ -30,7 +30,6 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:paddingLeft="5dp"
-        android:text="Deactivate Card"
         android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,14 +43,14 @@
         android:text="Subject:"
         android:textColor="@android:color/background_light"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/editText4"
-        app:layout_constraintEnd_toStartOf="@+id/editText3"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintEnd_toStartOf="@+id/creditCardNo"
         app:layout_constraintHorizontal_bias="0.814"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/email"
         android:layout_width="355dp"
         android:layout_height="182dp"
         android:background="@android:color/background_light"
@@ -62,13 +61,12 @@
         android:paddingTop="10dp"
         android:paddingEnd="10dp"
         android:paddingRight="0dp"
-        android:text="Hi, \n\nI would like to know how to deactivate web service for a credit card"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/creditCardNo"
         app:layout_constraintVertical_bias="0.050000012" />
 
     <ImageView
@@ -106,7 +104,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         app:layout_constraintVertical_bias="0.402" />
 
     <TextView

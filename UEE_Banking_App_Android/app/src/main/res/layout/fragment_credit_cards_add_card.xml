@@ -34,7 +34,7 @@
         app:layout_constraintVertical_bias="0.08" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/creditCardNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/text_input_field"
@@ -61,11 +61,11 @@
         app:layout_constraintEnd_toEndOf="@+id/textView4"
         app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/creditCardNo"
         app:layout_constraintVertical_bias="0.021" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -93,11 +93,10 @@
         app:layout_constraintEnd_toEndOf="@+id/textView4"
         app:layout_constraintHorizontal_bias="0.099"
         app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/editText4"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editText6"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -124,11 +123,11 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/editText4"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         app:layout_constraintVertical_bias="0.175" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/forgotPWusername"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:background="@drawable/text_input_field"
@@ -169,7 +168,6 @@
         app:layout_constraintVertical_bias="0.851">
 
         <ToggleButton
-            android:id="@+id/toggleButton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/visa_ic"
@@ -180,7 +178,6 @@
             tools:layout_editor_absoluteY="96dp" />
 
         <ToggleButton
-            android:id="@+id/toggleButton4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/master_ic"
@@ -191,7 +188,6 @@
             tools:layout_editor_absoluteY="96dp" />
 
         <ToggleButton
-            android:id="@+id/toggleButton5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/american_ic"
