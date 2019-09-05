@@ -22,6 +22,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:background="@drawable/check_button"
+        android:onClick="ok"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintHorizontal_bias="0.502"

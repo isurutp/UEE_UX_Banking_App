@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,4 +20,25 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void forgotPassword(View view)
+    {
+        Intent intent = new Intent(this,ForgotPassword.class);
+        startActivity(intent);
+
+    }
+
+    public void dontHaveAccount(View view)
+    {
+        Intent intent = new Intent(this,Register.class);
+        startActivity(intent);
+    }
+
+
+//    /**
+//     * Disabling back button
+//     */
+//    @Override
+//    public void onBackPressed() {
+//        Toast.makeText(getApplicationContext(), "Back button is disabled in this Screen", Toast.LENGTH_LONG).show();
+//    }
 }

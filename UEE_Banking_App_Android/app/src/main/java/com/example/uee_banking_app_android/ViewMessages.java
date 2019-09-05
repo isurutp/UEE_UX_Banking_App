@@ -2,7 +2,10 @@ package com.example.uee_banking_app_android;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 public class ViewMessages extends AppCompatActivity {
 
@@ -10,5 +13,37 @@ public class ViewMessages extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_messages);
+    }
+
+    public void readMessage(View view)
+    {
+        Intent intent = new Intent(this,OpenMessage.class);
+        startActivity(intent);
+
+    }
+
+    public void composeMessage(View view)
+    {
+        Intent intent = new Intent(this,ComposeMessage.class);
+        startActivity(intent);
+
+    }
+
+    public void menu(View view)
+    {
+        Intent intent = new Intent(this,menu_screen.class);
+        startActivityForResult(intent,0);
+//        startActivity(intent);
+
+    }
+
+
+
+    /**
+     * Disabling back button
+     */
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(getApplicationContext(), "Back button is disabled in this Screen", Toast.LENGTH_LONG).show();
     }
 }
