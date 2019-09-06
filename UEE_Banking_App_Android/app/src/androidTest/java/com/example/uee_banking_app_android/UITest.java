@@ -37,6 +37,8 @@ public class UITest {
         runAction(R.id.password)
                 .perform(typeText("ThanosWasRight"), closeSoftKeyboard());
        runAction(R.id.button).perform(click());
+        runAction(R.id.smsCode)
+                .perform(typeText("628682"),closeSoftKeyboard());
         runAction(R.id.submit).perform(click());
         if(logoutWhenDone)
         {
