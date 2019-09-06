@@ -19,7 +19,7 @@ public class ForgotPassword extends AppCompatActivity {
     {
         Intent intent = new Intent(this,ResetInstructions.class);
         startActivity(intent);
-
+        this.overridePendingTransition(R.anim.fade_in, R.anim.fade_out); //fade animations
     }
 
 

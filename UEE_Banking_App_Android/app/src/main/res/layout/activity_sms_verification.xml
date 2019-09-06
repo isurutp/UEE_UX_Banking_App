@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".sms_verification"
-    android:background="@drawable/login_background">
+    android:background="@drawable/login_background"
+    tools:context=".sms_verification">
 
     <Button
         android:id="@+id/submit"
@@ -19,4 +19,49 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/smsCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:background="@drawable/usename"
+        android:ems="10"
+        android:hint="SMS code"
+        android:inputType="textPersonName"
+        android:paddingLeft="70px"
+        android:paddingBottom="35px"
+        android:textColorHint="#3C3C3C"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="If you give SMS read permission, \n this will be detected automatically"
+        android:textAlignment="center"
+        android:textColor="#3C3C3C"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/smsCode"
+        app:layout_constraintVertical_bias="0.114" />
+
+    <TextView
+        android:id="@+id/register2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="332dp"
+        android:text="Enter your One Time Password (OTP):"
+        android:textAlignment="center"
+        android:textColor="#3C3C3C"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

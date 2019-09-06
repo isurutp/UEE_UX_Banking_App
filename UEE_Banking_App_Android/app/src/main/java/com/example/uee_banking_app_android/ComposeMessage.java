@@ -20,7 +20,7 @@ public class ComposeMessage extends AppCompatActivity {
     {
         Intent intent = new Intent(this, MessageSent.class);
         startActivity(intent);
-
+        this.overridePendingTransition(R.anim.fade_in, R.anim.fade_out); //fade animations
     }
 
 
