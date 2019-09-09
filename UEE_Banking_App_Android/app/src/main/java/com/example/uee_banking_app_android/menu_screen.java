@@ -38,6 +38,11 @@ public class menu_screen extends AppCompatActivity {
 
     }
 
+    public void transactionsButton(View view){
+        Intent intent = new Intent(this, bank_transfer.class);
+        startActivity(intent);
+    }
+
 
 
     /**
