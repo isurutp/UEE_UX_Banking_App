@@ -48,6 +48,10 @@ public class menu_screen extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void otherServices(View view){
+        Intent intent = new Intent(this,request_cheque_book.class);
+        startActivity(intent);
+    }
 
 
     /**
