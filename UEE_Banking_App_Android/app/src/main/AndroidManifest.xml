@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".bank_transfer"></activity>
+        <activity android:name=".settings_change_security"></activity>
+        <activity android:name=".settings_change_password" />
+        <activity android:name=".menu_settings_screen" />
+        <activity android:name=".bank_transfer" />
         <activity
             android:name=".OpenMessage"
             android:screenOrientation="portrait" />

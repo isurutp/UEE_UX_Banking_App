@@ -43,6 +43,11 @@ public class menu_screen extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void settingsBttn(View view){
+        Intent intent = new Intent(this,menu_settings_screen.class);
+        startActivity(intent);
+    }
+
 
 
     /**
