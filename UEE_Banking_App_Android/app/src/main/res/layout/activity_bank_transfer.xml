@@ -41,8 +41,8 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/transferViewPager"
-        android:layout_width="413dp"
-        android:layout_height="545dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="1dp"
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
