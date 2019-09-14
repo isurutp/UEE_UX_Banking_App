@@ -8,7 +8,6 @@
     android:background="@drawable/request_cheque_book_background">
 
     <Button
-        android:id="@+id/button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
@@ -58,7 +57,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
     <Spinner
-        android:id="@+id/spinner2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -71,7 +69,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
     <Spinner
-        android:id="@+id/spinner3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"

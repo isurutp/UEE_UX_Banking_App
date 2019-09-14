@@ -35,7 +35,7 @@ public class UITest {
         runAction(R.id.username)
                 .perform(typeText("John Doe"));
         runAction(R.id.password)
-                .perform(typeText("ThanosWasRight"), closeSoftKeyboard());
+                .perform(typeText("thanos"), closeSoftKeyboard());
        runAction(R.id.button).perform(click());
         runAction(R.id.smsCode)
                 .perform(typeText("628682"),closeSoftKeyboard());

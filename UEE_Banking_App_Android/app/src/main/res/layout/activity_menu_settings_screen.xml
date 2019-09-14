@@ -8,7 +8,6 @@
     android:background="@drawable/menu_settings_background">
 
     <Button
-        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
@@ -55,7 +54,6 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:layout_marginBottom="124dp"
@@ -72,7 +70,6 @@
         app:layout_constraintVertical_bias="0.239" />
 
     <TextView
-        android:id="@+id/textView10"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:background="@drawable/menu_settings_back_button"
