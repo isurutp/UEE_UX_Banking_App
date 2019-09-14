@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bank_transfer_background"
-    tools:context=".bank_transfer">
+    android:background="@drawable/bill_payments_bg"
+    tools:context=".BillPaymentsMain">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayoutbill"
@@ -21,26 +21,21 @@
         app:tabIndicatorHeight="4dp">
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/ownAccTab"
+            android:id="@+id/myPaymentsTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="OWN A/C" />
+            android:text="MY PROVIDERS" />
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/hnbTab"
+            android:id="@+id/addProviderTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TO HNB" />
+            android:text="ADD PROVIDER" />
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/otherBankTab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TO OTHER BANKS" />
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/transferViewPager"
+        android:id="@+id/billpViewPager"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="1dp"

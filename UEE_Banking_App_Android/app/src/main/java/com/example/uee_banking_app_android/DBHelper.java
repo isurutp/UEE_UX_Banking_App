@@ -19,6 +19,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         db.execSQL("INSERT INTO users VALUES('admin','admin')");
         db.execSQL("INSERT INTO users VALUES('John Doe','thanos')");
+        db.execSQL("INSERT INTO users VALUES('abi','abi')");
 
     }
 

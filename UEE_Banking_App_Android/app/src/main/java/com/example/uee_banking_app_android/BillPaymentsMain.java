@@ -8,28 +8,25 @@ import android.os.Bundle;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
-public class bank_transfer extends AppCompatActivity {
+public class BillPaymentsMain extends AppCompatActivity {
 
     TabLayout tabLayout;
     ViewPager viewPager ;
-    BankTransferPagesAdapter pageAdapter ;
-    TabItem ownAccTab ;
-    TabItem hnbTab;
-    TabItem otherBankTab;
-
+    BillPaymentsPagesAdapter pageAdapter ;
+    TabItem myTab ;
+    TabItem addTab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bank_transfer);
+        setContentView(R.layout.activity_bill_payments_main);
 
         tabLayout = findViewById(R.id.tabLayoutbill) ;
-        ownAccTab = findViewById(R.id.ownAccTab);
-        hnbTab = findViewById(R.id.hnbTab);
-        otherBankTab = findViewById(R.id.otherBankTab);
-        viewPager = findViewById(R.id.transferViewPager);
+        myTab = findViewById(R.id.myPaymentsTab);
+        addTab = findViewById(R.id.addProviderTab);
+        viewPager = findViewById(R.id.billpViewPager);
 
-        pageAdapter = new BankTransferPagesAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+        pageAdapter = new BillPaymentsPagesAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(pageAdapter);
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

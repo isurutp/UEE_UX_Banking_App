@@ -8,9 +8,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        >
-        <activity android:name=".popup_message_request_book"/>
+        android:theme="@style/AppTheme">
+        <activity android:name=".BillPaymentsMain"></activity>
+        <activity android:name=".menu_transaction_submenu" />
+        <activity android:name=".popup_message_request_book" />
         <activity android:name=".request_cheque_book" />
         <activity
             android:name=".settings_change_security"
