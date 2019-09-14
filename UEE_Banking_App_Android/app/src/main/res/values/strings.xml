@@ -2,7 +2,6 @@
     <string name="app_name">UEE_Banking_App_Android</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string-array name="select_account_names">
         <item>John Doe</item>

@@ -1,22 +1,58 @@
 package com.example.uee_banking_app_android;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    private DBHelper dbHelper;
+    private EditText usernameInput;
+    private EditText passwordInput;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        usernameInput = findViewById(R.id.username);
+        passwordInput = findViewById(R.id.password);
+
+        dbHelper = new DBHelper(this.getApplicationContext()); //Creating Tables
+        SQLiteDatabase DB = dbHelper.getWritableDatabase();
+        DB.close();
+
     }
 
     public void login(View view) {
-        Intent intent = new Intent(this,sms_verification.class);
-        startActivity(intent);
+        SQLiteDatabase DB = dbHelper.getReadableDatabase();
+        Cursor cursor = DB.rawQuery("SELECT * FROM users",null);
+        cursor.moveToFirst();
+        while(cursor.moveToNext())
+        {
+            String username = cursor.getString(cursor.getColumnIndex("username"));
+            String password = cursor.getString(cursor.getColumnIndex("password"));
+            if(username.equalsIgnoreCase(usernameInput.getText().toString()) && password.equalsIgnoreCase(passwordInput.getText().toString()))
+            {
+                Intent intent = new Intent(this,sms_verification.class);
+                startActivity(intent);
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(), "Login details are incorrect", Toast.LENGTH_LONG).show();
+                passwordInput.setText("");
+                usernameInput.setText("");
+            }
+        }
+
+        cursor.close();
+        DB.close();
     }
 
     public void forgotPassword(View view)
