@@ -1,6 +1,7 @@
 package com.example.uee_banking_app_android;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -27,6 +28,17 @@ public class MainActivity extends AppCompatActivity {
         dbHelper = new DBHelper(this.getApplicationContext()); //Creating Tables
         SQLiteDatabase DB = dbHelper.getWritableDatabase();
         DB.close();
+
+        SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
+        if (!prefs.contains("emailVerification"))
+        {
+            SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+            editor.putInt("emailVerification", 0);
+            editor.putInt("smsVerification", 1);
+            editor.apply();
+        }
+
+
 
     }
 

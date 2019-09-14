@@ -45,7 +45,7 @@
         app:layout_constraintStart_toStartOf="@+id/email" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/emailSwitch"
         android:layout_width="wrap_content"
         android:layout_height="42dp"
         android:backgroundTint="@android:color/black"
