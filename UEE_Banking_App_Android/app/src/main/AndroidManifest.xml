@@ -8,19 +8,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".request_cheque_book"></activity>
-
-        <activity android:name=".settings_change_security"
+        android:theme="@style/AppTheme"
+        >
+        <activity android:name=".popup_message_request_book"/>
+        <activity android:name=".request_cheque_book" />
+        <activity
+            android:name=".settings_change_security"
             android:screenOrientation="portrait" />
-
-        <activity android:name=".settings_change_password"
+        <activity
+            android:name=".settings_change_password"
             android:screenOrientation="portrait" />
-
-        <activity android:name=".menu_settings_screen"
+        <activity
+            android:name=".menu_settings_screen"
             android:screenOrientation="portrait" />
-
-        <activity android:name=".bank_transfer"
+        <activity
+            android:name=".bank_transfer"
             android:screenOrientation="portrait" />
         <activity
             android:name=".OpenMessage"
