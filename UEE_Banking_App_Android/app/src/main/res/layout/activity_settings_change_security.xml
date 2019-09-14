@@ -51,6 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:background="@drawable/login_button"
+        android:onClick="update"
         android:text="Update"
         android:textColor="#3C3C3C"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,18 +62,22 @@
         app:layout_constraintVertical_bias="0.86" />
 
     <Switch
+        android:id="@+id/emailSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
+        android:onClick="onEmailVerify"
         app:layout_constraintEnd_toEndOf="@+id/textView11"
         app:layout_constraintHorizontal_bias="0.797"
         app:layout_constraintStart_toStartOf="@+id/textView11"
         app:layout_constraintTop_toTopOf="@+id/textView11" />
 
     <Switch
+        android:id="@+id/smsSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
+        android:onClick="onSmsVerify"
         app:layout_constraintEnd_toEndOf="@+id/textView11"
         app:layout_constraintHorizontal_bias="0.797"
         app:layout_constraintStart_toStartOf="@+id/textView11"
