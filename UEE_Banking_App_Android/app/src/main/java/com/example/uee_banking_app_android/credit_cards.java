@@ -3,8 +3,13 @@ package com.example.uee_banking_app_android;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
@@ -47,15 +52,20 @@ public class credit_cards extends AppCompatActivity {
             }
         });
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+    }
+
+    public void mainMenu(View v){
+        Intent intent = new Intent(this,menu_screen.class);
+        startActivity(intent);
     }
 
 
-
-//    /**
+    //    /**
 //     * Disabling back button
 //     */
-//    @Override
-//    public void onBackPressed() {
-//        Toast.makeText(getApplicationContext(), "Back button is disabled in this Screen", Toast.LENGTH_LONG).show();
-//    }
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(getApplicationContext(), "Back button is disabled in this Screen", Toast.LENGTH_LONG).show();
+    }
 }
