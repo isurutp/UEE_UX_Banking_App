@@ -38,7 +38,7 @@ public class  RecycerViewAdapterTHistory extends RecyclerView.Adapter<RecycerVie
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View  view = LayoutInflater.from(parent.getContext()).inflate(R.layout.select_account_cards,parent,false);
+        View  view = LayoutInflater.from(parent.getContext()).inflate(R.layout.transaction_history_cards,parent,false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
@@ -72,12 +72,6 @@ public class  RecycerViewAdapterTHistory extends RecyclerView.Adapter<RecycerVie
         holder.balance.setText(balance.get(position));
         holder.date.setText(date.get(position));
 
-        holder.parent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
     }
 
     @Override

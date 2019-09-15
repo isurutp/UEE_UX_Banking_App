@@ -23,7 +23,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 @RunWith(AndroidJUnit4.class)
 public class UITest {
 
-    private boolean logoutWhenDone = true;
+    private boolean logoutWhenDone = false;
 
     @Rule
     public ActivityScenarioRule<MainActivity> activityScenarioRule

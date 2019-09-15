@@ -23,6 +23,8 @@ public class TransactionHistory extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaction_history);
+        initValues();
+        initRecyclerView();
     }
 
 
@@ -63,7 +65,7 @@ public class TransactionHistory extends AppCompatActivity {
         amount.add("20,000");
         balance.add("234,678");
         date.add("12/12/19");
-        type.add("payment");
+        type.add("Payment");
         payment.add("Withdrawal");
         amount.add("20,000");
         balance.add("234,678");

@@ -54,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
             {
                 Intent intent = new Intent(this,sms_verification.class);
                 startActivity(intent);
+                cursor.close();
+                DB.close();
+                return;
             }
             else
             {

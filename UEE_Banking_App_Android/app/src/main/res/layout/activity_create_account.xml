@@ -23,22 +23,11 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    android:id="@+id/joint_acc_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="185dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/joint_account_button"
-                    android:text="@string/defualt_empty"
-                    app:layout_constraintStart_toStartOf="@+id/inner_layout"
-                    app:layout_constraintTop_toBottomOf="@+id/branch_field" />
-
-                <Button
                     android:id="@+id/next_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
-                    android:layout_marginTop="100dp"
+                    android:layout_marginTop="30dp"
                     android:background="@drawable/next_button"
                     android:onClick="openNext"
                     android:text="@string/defualt_empty"
@@ -50,7 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="100dp"
+                    android:layout_marginTop="30dp"
                     android:background="@drawable/cancel_button"
                     android:onClick="openback"
                     android:text="@string/defualt_empty"
@@ -80,7 +69,7 @@
                 <ImageView
                     android:id="@+id/inner_layout"
                     android:layout_width="0dp"
-                    android:layout_height="500dp"
+                    android:layout_height="400dp"
                     android:layout_marginBottom="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginStart="20dp"
@@ -92,6 +81,44 @@
                     app:layout_constraintTop_toBottomOf="@+id/logo_background"
                     app:layout_constraintVertical_bias="1.0"
                     app:srcCompat="@color/default_light_gray_background" />
+
+                <TextView
+                    android:id="@+id/text_branch"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:editable="true"
+                    app:layout_constraintBottom_toBottomOf="@id/branch_field"
+                    app:layout_constraintEnd_toEndOf="@id/branch_field"
+                    app:layout_constraintStart_toStartOf="@id/branch_field"
+                    app:layout_constraintTop_toTopOf="@id/branch_field" />
+
+                <TextView
+                    android:id="@+id/text_name"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:editable="true"
+                    android:hint="@string/name"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:textColorHint="@color/Black"
+                    app:layout_constraintBottom_toBottomOf="@id/name_field"
+                    app:layout_constraintEnd_toEndOf="@id/name_field"
+                    app:layout_constraintStart_toStartOf="@id/name_field"
+                    app:layout_constraintTop_toTopOf="@id/name_field" />
+
+                <TextView
+                    android:id="@+id/text_nic"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:editable="true"
+                    android:hint="NIC"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:textColorHint="@color/Black"
+                    app:layout_constraintBottom_toBottomOf="@id/nic_field"
+                    app:layout_constraintEnd_toEndOf="@id/nic_field"
+                    app:layout_constraintStart_toStartOf="@id/nic_field"
+                    app:layout_constraintTop_toTopOf="@id/nic_field" />
 
                 <ImageView
                     android:id="@+id/branch_field"
@@ -115,6 +142,15 @@
 
                 <ImageView
                     android:id="@+id/name_field"
+                    android:layout_width="283dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    app:layout_constraintStart_toStartOf="@+id/inner_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/account_under_head"
+                    app:srcCompat="@drawable/text_input_field" />
+
+                <ImageView
+                    android:id="@+id/name_field2"
                     android:layout_width="283dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
