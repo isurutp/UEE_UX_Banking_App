@@ -1,12 +1,16 @@
 package com.example.uee_banking_app_android.util;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.example.uee_banking_app_android.AccountDetails;
 import com.example.uee_banking_app_android.R;
+
 
 import java.util.ArrayList;
 
@@ -55,10 +59,13 @@ public class RecyclerViewAdapterAccountCard extends RecyclerView.Adapter<Recycle
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
-            }
+                Intent intent = new Intent(context, AccountDetails.class);
+                context.startActivity(intent);
+           }
         });
     }
+
+
 
     @Override
     public int getItemCount() {

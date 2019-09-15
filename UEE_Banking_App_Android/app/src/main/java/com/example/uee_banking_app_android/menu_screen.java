@@ -53,6 +53,11 @@ public class menu_screen extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openNext(View view){
+        Intent intent = new Intent(this, Select_Account.class);
+        startActivity(intent);
+    }
+
 
     /**
      * Disabling back button

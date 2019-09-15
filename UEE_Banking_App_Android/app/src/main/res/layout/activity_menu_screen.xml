@@ -42,6 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
+        android:onClick="openNext"
         android:text="Account"
         android:textColor="#C8C8C8"
         android:textSize="20dp"
