@@ -1,6 +1,8 @@
 package com.example.uee_banking_app_android;
 
 
+
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,13 +10,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class credit_cards_my_cards extends Fragment {
-
 
     public credit_cards_my_cards() {
         // Required empty public constructor
@@ -27,5 +29,6 @@ public class credit_cards_my_cards extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_credit_cards_my_cards, container, false);
     }
+
 
 }

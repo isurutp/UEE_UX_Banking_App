@@ -55,4 +55,8 @@ public class request_cheque_book extends AppCompatActivity {
         myDialog.show();
     }
 
+    public void onBackPressed() {
+        Toast.makeText(getApplicationContext(), "Back button is disabled in this Screen", Toast.LENGTH_LONG).show();
+    }
+
 }

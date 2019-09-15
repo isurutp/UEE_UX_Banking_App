@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.uee_banking_app_android.util.RecyclerViewAdapterAccountCard;
 
@@ -48,4 +50,11 @@ public class Select_Account extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
+
+    public void openCreate (View view){
+        Intent intent = new Intent(this,CreateAccount.class);
+        startActivity(intent);
+    }
+
+
 }

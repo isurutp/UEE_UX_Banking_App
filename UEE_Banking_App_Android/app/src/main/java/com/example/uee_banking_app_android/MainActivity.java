@@ -54,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
             {
                 Intent intent = new Intent(this,sms_verification.class);
                 startActivity(intent);
+                cursor.close();
+                DB.close();
+                return;
             }
             else
             {
@@ -83,8 +86,8 @@ public class MainActivity extends AppCompatActivity {
 //    /**
 //     * Disabling back button
 //     */
-//    @Override
-//    public void onBackPressed() {
-//        Toast.makeText(getApplicationContext(), "Back button is disabled in this Screen", Toast.LENGTH_LONG).show();
-//    }
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(getApplicationContext(), "Back button is disabled in this Screen", Toast.LENGTH_LONG).show();
+    }
 }
