@@ -38,6 +38,20 @@ public class menu_screen extends AppCompatActivity {
 
     }
 
+    public void transactionsButton(View view){
+        Intent intent = new Intent(this, menu_transaction_submenu.class);
+        startActivity(intent);
+    }
+
+    public void settingsBttn(View view){
+        Intent intent = new Intent(this,menu_settings_screen.class);
+        startActivity(intent);
+    }
+
+    public void otherServices(View view){
+        Intent intent = new Intent(this,request_cheque_book.class);
+        startActivity(intent);
+    }
 
 
     /**

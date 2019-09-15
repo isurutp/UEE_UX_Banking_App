@@ -27,4 +27,44 @@
 
 
     <!-- TODO: Remove or change this placeholder text -->
+
+    <string-array name="select_account_names">
+        <item>John Doe</item>
+    </string-array>
+
+    <string-array name="select_number_of_books">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="select_number_of_leaves">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+    </string-array>
+
+    <string-array name="own_accs">
+        <item>8104242</item>
+        <item>8104525</item>
+        <item>8107373</item>
+    </string-array>
+
+    <string-array name="bank_names">
+        <item>COMMERCIAL BANK</item>
+        <item>PEOPLES BANK</item>
+        <item>NATIONS TRUST BANK</item>
+        <item>NATIONAL SAVINGS BANK</item>
+        <item>BANK OF CEYLON</item>
+        <item>DFCC BANK</item>
+        <item>SAMPATH BANK</item>
+        <item>SEYLAN BANK</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>

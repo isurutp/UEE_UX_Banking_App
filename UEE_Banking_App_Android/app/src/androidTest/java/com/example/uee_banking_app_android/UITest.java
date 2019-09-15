@@ -35,7 +35,7 @@ public class UITest {
         runAction(R.id.username)
                 .perform(typeText("John Doe"));
         runAction(R.id.password)
-                .perform(typeText("ThanosWasRight"), closeSoftKeyboard());
+                .perform(typeText("thanos"), closeSoftKeyboard());
        runAction(R.id.button).perform(click());
         runAction(R.id.smsCode)
                 .perform(typeText("628682"),closeSoftKeyboard());
@@ -63,13 +63,13 @@ public class UITest {
     {
         runAction(R.id.Register).perform(click());
         runAction(R.id.username)
-                .perform(typeText("John Doe"),closeSoftKeyboard());
+                .perform(typeText("John Doe\n"));
         runAction(R.id.password)
-                .perform(typeText("0713659825"),closeSoftKeyboard());
+                .perform(typeText("0713659825\n"));
         runAction(R.id.creditCardNo)
-                .perform(typeText("3251 2532 9215"),closeSoftKeyboard());
-        runAction(R.id.email)
-                .perform(typeText("jDoe@gmail.com"),closeSoftKeyboard());
+                .perform(typeText("3251 2532 9215\n"));
+        runAction(R.id.emailSwitch)
+                .perform(typeText("jDoe@gmail.com\n"));
         runAction(R.id.NIC)
                 .perform(typeText("961341284V"),closeSoftKeyboard());
 
@@ -90,7 +90,7 @@ public class UITest {
 
         runAction(R.id.creditCardNo)
                 .perform(typeText("Deactivate Card"),closeSoftKeyboard());
-        runAction(R.id.email)
+        runAction(R.id.emailSwitch)
                 .perform(typeText("Hi, \n\nI would like to know how to deactivate web service for a credit card"), closeSoftKeyboard());
 
         runAction(R.id.button).perform(click());
