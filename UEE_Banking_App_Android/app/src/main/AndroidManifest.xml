@@ -9,21 +9,51 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OpenMessage" android:screenOrientation="portrait"/>
-        <activity android:name=".ViewMessages" android:screenOrientation="portrait"/>
-        <activity android:name=".MessageSent" android:screenOrientation="portrait" />
-        <activity android:name=".ComposeMessage" android:screenOrientation="portrait"/>
-        <activity android:name=".ResetInstructions" android:screenOrientation="portrait"/>
-        <activity android:name=".Register" android:screenOrientation="portrait"/>
-        <activity android:name=".LoginDetailsMessage" android:screenOrientation="portrait"/>
-        <activity android:name=".ForgotPassword" android:screenOrientation="portrait"/>
-
-        <activity android:name=".credit_cards" android:screenOrientation="portrait"/>
-        <activity android:name=".menu_screen" android:screenOrientation="portrait"/>
-        <activity android:name=".sms_verification" android:screenOrientation="portrait"/>
-        <activity android:name=".MainActivity" android:screenOrientation="portrait">
+        <activity android:name=".TransactionHistory"></activity>
+        <activity android:name=".AccountDetails" />
+        <activity android:name=".Confirm_New_Account" />
+        <activity android:name=".Create_Account_page2" />
+        <activity android:name=".CreateAccount" />
+        <activity android:name=".Select_Account" />
+        <activity
+            android:name=".OpenMessage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewMessages"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MessageSent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ComposeMessage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ResetInstructions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Register"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginDetailsMessage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgotPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".credit_cards"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".menu_screen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sms_verification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

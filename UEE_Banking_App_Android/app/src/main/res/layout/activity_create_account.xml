@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3C3C3C"
+    tools:context=".CreateAccount">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="180dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/joint_acc_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="185dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/joint_account_button"
+                    android:text="@string/defualt_empty"
+                    app:layout_constraintStart_toStartOf="@+id/inner_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/branch_field" />
+
+                <Button
+                    android:id="@+id/cancel_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="100dp"
+                    android:background="@drawable/cancel_button"
+                    android:text="@string/defualt_empty"
+                    app:layout_constraintStart_toStartOf="@+id/inner_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/branch_field" />
+
+                <Button
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="100dp"
+                    android:background="@drawable/back_button"
+                    android:text="@string/defualt_empty"
+                    app:layout_constraintStart_toEndOf="@+id/cancel_button"
+                    app:layout_constraintTop_toBottomOf="@+id/branch_field" />
+
+                <ImageView
+                    android:id="@+id/logo_background"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@color/logo_background" />
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="@id/logo_background"
+                    app:layout_constraintEnd_toEndOf="@+id/logo_background"
+                    app:layout_constraintStart_toStartOf="@id/logo_background"
+                    app:layout_constraintTop_toTopOf="@id/logo_background"
+                    app:srcCompat="@drawable/hnb_logo" />
+
+                <ImageView
+                    android:id="@+id/inner_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="500dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/logo_background"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:srcCompat="@color/default_light_gray_background" />
+
+                <ImageView
+                    android:id="@+id/branch_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toStartOf="@+id/inner_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/branch_head"
+                    app:srcCompat="@drawable/text_input_field" />
+
+                <ImageView
+                    android:id="@+id/nic_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintStart_toStartOf="@+id/inner_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/name_field"
+                    app:srcCompat="@drawable/text_input_field" />
+
+                <ImageView
+                    android:id="@+id/name_field"
+                    android:layout_width="283dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    app:layout_constraintStart_toStartOf="@+id/inner_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/account_under_head"
+                    app:srcCompat="@drawable/text_input_field" />
+
+                <TextView
+                    android:id="@+id/account_under_head"
+                    android:layout_width="205dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:text=" Account Under"
+                    android:textColor="#004590"
+                    android:textSize="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/inner_layout" />
+
+                <TextView
+                    android:id="@+id/branch_head"
+                    android:layout_width="205dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="25dp"
+                    android:text=" Branch"
+                    android:textColor="#004590"
+                    android:textSize="25dp"
+                    app:layout_constraintStart_toStartOf="@+id/inner_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/nic_field" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
