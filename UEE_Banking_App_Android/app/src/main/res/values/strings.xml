@@ -1,5 +1,30 @@
 <resources>
     <string name="app_name">UEE_Banking_App_Android</string>
+    <string name="name">Name</string>
+    <string name="defualt_empty" />
+    <string name="branch">branch</string>
+    <string name="account_name">Account Name</string>
+    <string name="select_account_details">Select Account Details</string>
+    <string name="account_type">Account Type</string>
+    <string name="debit_limit">Debit Limit</string>
+    <string name="over_draft_limit">Over Daft Limit</string>
+    <string name="credit_limit">Credit Limit</string>
+    <string name="new_account">New Account</string>
+    <string name="details">Details</string>
+    <string name="owner">Owner </string>
+    <string name="interest">Interest</string>
+    <string name="credit_interest">Credit Interest</string>
+    <string name="dibit_interest">Debit Interest</string>
+    <string name="colon">:</string>
+    <string name="empty_string" />
+    <string name="debit_interest">Debit Interest</string>
+    <string name="balance">Balance</string>
+    <string name="available_balance">Available Balance</string>
+    <string name="account_information">Account Information</string>
+    <string name="available">Available</string>
+    <string name="total">Total</string>
+    <string name="credit">Credit</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
 

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_project_background"
+    tools:context=".Create_Account_page2">
+
+    <ScrollView
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logo_background"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@color/logo_background" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/logo_background"
+            app:layout_constraintEnd_toEndOf="@+id/logo_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/logo_background"
+            app:srcCompat="@drawable/hnb_logo" />
+
+        <ImageView
+            android:id="@+id/inner_layout"
+            android:layout_width="0dp"
+            android:layout_height="600dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo_background"
+            app:srcCompat="@color/default_light_gray_background" />
+
+        <TextView
+            android:id="@+id/lable_account_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/account_name"
+            android:textColor="@color/default_text_colour"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="@+id/inner_layout"
+            app:layout_constraintTop_toBottomOf="@+id/page_heading" />
+
+        <TextView
+            android:id="@+id/lable_account_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/account_type"
+            android:textColor="@color/default_text_colour"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="@+id/inner_layout"
+            app:layout_constraintTop_toBottomOf="@+id/account_name_field" />
+
+        <TextView
+            android:id="@+id/lable_debit_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/debit_limit"
+            android:textColor="@color/default_text_colour"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="@+id/inner_layout"
+            app:layout_constraintTop_toBottomOf="@+id/account_type_field" />
+
+        <TextView
+            android:id="@+id/lable_over_daft_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="@string/over_draft_limit"
+            android:textColor="@color/default_text_colour"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="@+id/inner_layout"
+            app:layout_constraintTop_toBottomOf="@+id/credit_limit_field" />
+
+        <TextView
+            android:id="@+id/lable_credit_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="@string/credit_limit"
+            android:textColor="@color/default_text_colour"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="@+id/inner_layout"
+            app:layout_constraintTop_toBottomOf="@+id/debit_limit_field" />
+
+        <TextView
+            android:id="@+id/page_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/select_account_details"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="27dp"
+            app:layout_constraintStart_toStartOf="@+id/inner_layout"
+            app:layout_constraintTop_toTopOf="@+id/inner_layout" />
+
+        <ImageView
+            android:id="@+id/account_name_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toStartOf="@+id/inner_layout"
+            app:layout_constraintTop_toBottomOf="@+id/lable_account_name"
+            app:srcCompat="@drawable/text_input_field" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toStartOf="@id/inner_layout"
+            app:layout_constraintTop_toBottomOf="@+id/cancel_button2"
+            app:srcCompat="@drawable/next_button" />
+
+        <ImageView
+            android:id="@+id/account_type_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toStartOf="@+id/inner_layout"
+            app:layout_constraintTop_toBottomOf="@id/lable_account_type"
+            app:srcCompat="@drawable/text_input_field" />
+
+        <ImageView
+            android:id="@+id/debit_limit_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toStartOf="@+id/inner_layout"
+            app:layout_constraintTop_toBottomOf="@+id/lable_debit_limit"
+            app:srcCompat="@drawable/text_input_field" />
+
+        <ImageView
+            android:id="@+id/over_daft_limit_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toStartOf="@+id/inner_layout"
+            app:layout_constraintTop_toBottomOf="@+id/lable_over_daft_limit"
+            app:srcCompat="@drawable/text_input_field" />
+
+        <ImageView
+            android:id="@+id/credit_limit_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toStartOf="@+id/inner_layout"
+            app:layout_constraintTop_toBottomOf="@+id/lable_credit_limit"
+            app:srcCompat="@drawable/text_input_field" />
+
+        <Button
+            android:id="@+id/cancel_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/cancel_button"
+            android:text="@string/defualt_empty"
+            app:layout_constraintStart_toStartOf="@+id/inner_layout"
+            app:layout_constraintTop_toBottomOf="@id/over_daft_limit_field" />
+
+        <Button
+            android:id="@+id/back_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/back_button"
+            android:text="@string/defualt_empty"
+            app:layout_constraintStart_toEndOf="@+id/cancel_button2"
+            app:layout_constraintTop_toBottomOf="@id/over_daft_limit_field" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
