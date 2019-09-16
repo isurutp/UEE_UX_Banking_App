@@ -1,5 +1,6 @@
 package com.example.uee_banking_app_android;
 
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,6 +26,12 @@ public class UITest {
 
     private boolean logoutWhenDone = false;
 
+    @BeforeClass
+    public static void beforeClass()
+    {
+        MainActivity.autoFill = false;
+    }
+
     @Rule
     public ActivityScenarioRule<MainActivity> activityScenarioRule
             = new ActivityScenarioRule<>(MainActivity.class);
@@ -32,6 +39,7 @@ public class UITest {
     @Test
     public void loginTest() {
         // Type text and then press the button.
+
         runAction(R.id.username)
                 .perform(typeText("John Doe"));
         runAction(R.id.password)
@@ -85,7 +93,7 @@ public class UITest {
         loginTest();
         runAction(R.id.mailText).perform(click());
         runAction(R.id.button5).perform(click());
-        runAction(R.id.imageView4).perform(click());
+        runAction(R.id.constraint).perform(click());
         runAction(R.id.button).perform(click());
 
         runAction(R.id.creditCardNo)

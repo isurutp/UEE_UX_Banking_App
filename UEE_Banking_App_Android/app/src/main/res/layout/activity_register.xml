@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3C3C3C"
+    android:background="@drawable/register_background"
     tools:context=".Register">
 
     <Button
@@ -21,17 +21,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/register_background" />
 
     <EditText
         android:id="@+id/emailSwitch"
@@ -86,23 +75,22 @@
         android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="42dp"
-        android:layout_marginEnd="48dp"
         android:backgroundTint="@android:color/black"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="@android:color/black"
         android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/forgotPassword"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/forgotPassword" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
         android:text="NIC:"
         android:textColor="@android:color/black"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -120,14 +108,13 @@
         android:id="@+id/forgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
         android:text="Full Name:"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/Register"
         app:layout_constraintEnd_toStartOf="@+id/username"
-        app:layout_constraintHorizontal_bias="0.715"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
         app:layout_constraintVertical_bias="0.45" />
 
     <TextView
@@ -149,5 +136,16 @@
         app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="@+id/Register"
         app:layout_constraintTop_toBottomOf="@+id/Register" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="385dp"
+        android:layout_height="358dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.656" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

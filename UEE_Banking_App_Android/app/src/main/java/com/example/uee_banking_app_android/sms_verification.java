@@ -18,6 +18,11 @@ public class sms_verification extends AppCompatActivity {
         setContentView(R.layout.activity_sms_verification);
 
         code = findViewById(R.id.smsCode);
+
+        if(MainActivity.autoFill)
+        {
+            code.setText("623492");
+        }
     }
 
     public void submitBttn(View view) {
