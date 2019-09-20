@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -22,10 +23,14 @@ public class credit_cards extends AppCompatActivity {
     TabItem myCardTab ;
     TabItem addCardTab ;
 
+    Dialog myDialog ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_credit_cards);
+
+        myDialog = new Dialog(this);
 
         tabLayout = findViewById(R.id.tabLayout) ;
         myCardTab = findViewById(R.id.myCards);
@@ -58,6 +63,64 @@ public class credit_cards extends AppCompatActivity {
     public void mainMenu(View v){
         Intent intent = new Intent(this,menu_screen.class);
         startActivity(intent);
+    }
+
+    public void addCardPopup(View view){
+        Button closeBttn ;
+        Button yesBttn;
+        TextView textMsg ;
+
+        myDialog.setContentView(R.layout.activity_popup_message_request_book);
+        closeBttn = (Button) myDialog.findViewById(R.id.msg_close_bttn);
+        yesBttn = (Button) myDialog.findViewById(R.id.msg_yes_bttn);
+        textMsg = (TextView) myDialog.findViewById(R.id.textView19);
+
+        textMsg.setText("Are you sure u want to add new card?");
+
+        closeBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.dismiss();
+            }
+        });
+
+        yesBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.dismiss();
+                Toast.makeText(getApplicationContext(), "Successfully added", Toast.LENGTH_LONG).show();
+            }
+        });
+        myDialog.show();
+    }
+
+    public void delinkCard(View view){
+        Button closeBttn ;
+        Button yesBttn;
+        TextView textMsg ;
+
+        myDialog.setContentView(R.layout.activity_popup_message_request_book);
+        closeBttn = (Button) myDialog.findViewById(R.id.msg_close_bttn);
+        yesBttn = (Button) myDialog.findViewById(R.id.msg_yes_bttn);
+        textMsg = (TextView) myDialog.findViewById(R.id.textView19);
+
+        textMsg.setText("Are you sure u want to delink the selected card?");
+
+        closeBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.dismiss();
+            }
+        });
+
+        yesBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.dismiss();
+                Toast.makeText(getApplicationContext(), "Successfully removed", Toast.LENGTH_LONG).show();
+            }
+        });
+        myDialog.show();
     }
 
 
