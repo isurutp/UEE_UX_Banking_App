@@ -10,7 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".TransactionHistory"></activity>
+
+        <activity android:name=".my_provider_payment"></activity>
+        <activity android:name=".add_provider_ui" />
+        <activity android:name=".bank_transfer_popup" />
+        <activity android:name=".TransactionHistory" />
         <activity android:name=".AccountDetails" />
         <activity android:name=".Confirm_New_Account" />
         <activity android:name=".Create_Account_page2" />

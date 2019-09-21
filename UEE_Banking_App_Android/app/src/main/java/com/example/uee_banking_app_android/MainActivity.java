@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private DBHelper dbHelper;
     private EditText usernameInput;
     private EditText passwordInput;
+    public static Boolean autoFill = true;    //Auto fill Login
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
         usernameInput = findViewById(R.id.username);
         passwordInput = findViewById(R.id.password);
+
+        if(autoFill)
+        {
+            usernameInput.setText("John Doe");
+            passwordInput.setText("thanos");
+        }
 
         dbHelper = new DBHelper(this.getApplicationContext()); //Creating Tables
         SQLiteDatabase DB = dbHelper.getWritableDatabase();
@@ -37,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
             editor.putInt("smsVerification", 1);
             editor.apply();
         }
-
-
 
     }
 
@@ -86,8 +91,8 @@ public class MainActivity extends AppCompatActivity {
 //    /**
 //     * Disabling back button
 //     */
-//    @Override
-//    public void onBackPressed() {
-//        Toast.makeText(getApplicationContext(), "Back button is disabled in this Screen", Toast.LENGTH_LONG).show();
-//    }
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(getApplicationContext(), "Back button is disabled in this Screen", Toast.LENGTH_LONG).show();
+    }
 }

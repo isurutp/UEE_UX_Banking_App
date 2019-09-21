@@ -3,7 +3,9 @@ package com.example.uee_banking_app_android;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
@@ -47,4 +49,16 @@ public class BillPaymentsMain extends AppCompatActivity {
         });
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
     }
+
+    public void addProviderButton(View view){
+        Intent intent = new Intent(this, add_provider_ui.class);
+        startActivity(intent);
+    }
+
+    public void myProviderButton(View view){
+        Intent intent = new Intent(this, my_provider_payment.class);
+        startActivity(intent);
+    }
+
+
 }

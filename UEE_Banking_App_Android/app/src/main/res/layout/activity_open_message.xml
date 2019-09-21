@@ -2,20 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3C3C3C"
-    tools:context=".OpenMessage">
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="418dp"
-        android:layout_height="743dp"
-        android:onClick="viewMessages"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/message_blur" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:background="@drawable/message_blur"
+    android:onClick="viewMessages"
+    tools:context=".OpenMessage" />

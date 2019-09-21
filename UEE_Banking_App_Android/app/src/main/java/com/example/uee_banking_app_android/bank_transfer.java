@@ -3,7 +3,12 @@ package com.example.uee_banking_app_android;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
@@ -16,6 +21,7 @@ public class bank_transfer extends AppCompatActivity {
     TabItem ownAccTab ;
     TabItem hnbTab;
     TabItem otherBankTab;
+    Dialog myDialog ;
 
 
     @Override
@@ -28,6 +34,7 @@ public class bank_transfer extends AppCompatActivity {
         hnbTab = findViewById(R.id.hnbTab);
         otherBankTab = findViewById(R.id.otherBankTab);
         viewPager = findViewById(R.id.transferViewPager);
+        myDialog = new Dialog(this);
 
         pageAdapter = new BankTransferPagesAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(pageAdapter);
@@ -49,5 +56,35 @@ public class bank_transfer extends AppCompatActivity {
             }
         });
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+    }
+
+    public void refreshPage(View view){
+        Intent intent = new Intent(this,bank_transfer.class);
+        startActivity(intent);
+    }
+
+    public void showPopupMsg(View view){
+        Button closeBttn ;
+        Button yesBttn;
+
+        myDialog.setContentView(R.layout.activity_bank_transfer_popup);
+        closeBttn = (Button) myDialog.findViewById(R.id.msg_close_bttn);
+        yesBttn = (Button) myDialog.findViewById(R.id.msg_yes_bttn);
+
+        closeBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.dismiss();
+            }
+        });
+
+        yesBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.dismiss();
+                Toast.makeText(getApplicationContext(), "Transfer Request Made Successfully", Toast.LENGTH_LONG).show();
+            }
+        });
+        myDialog.show();
     }
 }

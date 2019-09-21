@@ -6,6 +6,7 @@
     <color name="default_text_colour">#024EA2</color>
     <color name="white">#FFFFFF</color>
     <color name="Black">#000000</color>
-    <color name="hrought">#00FFFFFF</color>
     <color name="see_through_background">#00FFFFFF</color>
+    <color name="transp">#00FFFFFF</color>
+
 </resources>
