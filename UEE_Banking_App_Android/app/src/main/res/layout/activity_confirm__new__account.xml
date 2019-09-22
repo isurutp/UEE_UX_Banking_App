@@ -43,7 +43,7 @@
             <ImageView
                 android:id="@+id/inner_layout"
                 android:layout_width="0dp"
-                android:layout_height="700dp"
+                android:layout_height="660dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
@@ -65,7 +65,7 @@
             <ImageView
                 android:id="@+id/details_block1"
                 android:layout_width="0dp"
-                android:layout_height="110dp"
+                android:layout_height="130dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="130dp"
@@ -104,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="@string/new_account"
-                    android:textColor="@color/default_text_colour"
+                    android:textColor="@color/white"
                     android:textSize="40sp"
                     android:textStyle="bold" />
 
@@ -114,9 +114,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
                     android:text="@string/details"
-                    android:textColor="@color/default_text_colour"
+                    android:textColor="@color/white"
                     android:textSize="30sp"
                     android:textStyle="bold" />
 
@@ -124,7 +124,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -209,6 +209,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -334,7 +335,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="20dp"
-                        android:text="@string/over_draft_limit"
+                        android:text="@string/currency"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -488,7 +489,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/cancel_button"
                 android:onClick="cancel"
                 android:text="@string/empty_string"
@@ -500,7 +501,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/send_request_button"
                 android:onClick="confirm"
                 android:text="@string/empty_string"

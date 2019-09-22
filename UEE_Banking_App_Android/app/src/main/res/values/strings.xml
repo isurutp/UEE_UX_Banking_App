@@ -12,7 +12,6 @@
     <string name="new_account">New Account</string>
     <string name="details">Details</string>
     <string name="owner">Owner </string>
-    <string name="interest">Interest</string>
     <string name="credit_interest">Credit Interest</string>
     <string name="dibit_interest">Debit Interest</string>
     <string name="colon">:</string>
@@ -65,6 +64,23 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_1_month">1 Month</string>
+    <string name="_2_month">2 Month</string>
+    <string name="_6_month">6 Month</string>
+    <string name="_1_year">1 Year</string>
+    <string name="all">All</string>
+    <string name="interest">Interest</string>
+    <string name="atm">ATM</string>
+    <string name="payments">Payments</string>
+    <string name="cerdit">Cerdit</string>
+    <string name="debit">Debit</string>
+    <string name="transfer">Transfer</string>
+    <string name="_3_Month">3 Month</string>
+    <string name="status">Status</string>
+    <string name="hold">Hold</string>
+    <string name="un_available_balance">Un-Available Balance</string>
+    <string name="nic">NIC</string>
+    <string name="currency">Currency</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

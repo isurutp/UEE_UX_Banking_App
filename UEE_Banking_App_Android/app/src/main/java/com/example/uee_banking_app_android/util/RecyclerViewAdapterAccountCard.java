@@ -55,11 +55,12 @@ public class RecyclerViewAdapterAccountCard extends RecyclerView.Adapter<Recycle
         holder.balance.setText(balance.get(position));
         holder.avaBalance.setText(avaBalance.get(position));
         holder.accRef.setText(accRef.get(position));
-
+        final int num = position;
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, AccountDetails.class);
+                intent.putExtra("Name",accountName.get(num));
                 context.startActivity(intent);
            }
         });
