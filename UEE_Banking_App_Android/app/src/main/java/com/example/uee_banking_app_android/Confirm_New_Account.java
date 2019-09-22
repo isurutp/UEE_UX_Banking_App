@@ -34,8 +34,8 @@ public class Confirm_New_Account extends AppCompatActivity {
         pageOneData = bundle.getStringArray("pageOneData");
         pageTwoData = bundle.getStringArray("pageTwoData");
 
-        name = findViewById(R.id.text_account_name);
-        owner = findViewById(R.id.text_owner);
+        name = findViewById(R.id.header);
+        //owner = findViewById(R.id.text_owner);
         branch = findViewById(R.id.text_branch);
         currency = findViewById(R.id.text_currency);
         interest = findViewById(R.id.text_interest);
@@ -51,15 +51,15 @@ public class Confirm_New_Account extends AppCompatActivity {
 
     private void init(){
         name.setText(pageTwoData[0]);
-        owner.setText(pageOneData[0]);
-        branch.setText(pageOneData[2]);
-        currency.setText(pageTwoData[2]);
-        interest.setText(pageTwoData[5]);
-        type.setText(pageTwoData[1]);
-        CLimit.setText(pageTwoData[3]);
-        dLimit.setText(pageTwoData[4]);
-        cInterest.setText(pageTwoData[7]);
-        dInterest.setText(pageTwoData[6]);
+//        owner.setText("John Doe");
+//        branch.setText(pageOneData[2]);
+//        currency.setText(pageTwoData[2]);
+//        interest.setText(pageTwoData[5]);
+//        type.setText(pageTwoData[1]);
+//        CLimit.setText(pageTwoData[3]);
+//        dLimit.setText(pageTwoData[4]);
+//        cInterest.setText(pageTwoData[7]);
+//        dInterest.setText(pageTwoData[6]);
     }
 
 

@@ -179,7 +179,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="@string/over_draft_limit"
+                    android:text="@string/currency"
                     android:textColor="@color/default_text_colour"
                     android:textSize="20dp"
                     app:layout_constraintStart_toStartOf="parent"

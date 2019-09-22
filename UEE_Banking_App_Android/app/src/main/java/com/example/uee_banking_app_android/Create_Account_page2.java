@@ -50,7 +50,7 @@ public class Create_Account_page2 extends AppCompatActivity {
         pageTwoData[4] = CLimit.getText().toString().trim();
         pageTwoData[5] = getInterest(pageTwoData[1]);
         pageTwoData[6] = getDebitInterest();
-        pageTwoData[7] = getCreditInterest(Double.parseDouble(pageTwoData[4]));
+        pageTwoData[7] = "34%";
 
         Intent intent = new Intent(this, Confirm_New_Account.class);
         intent.putExtra("pageoOneData",pageOneData);

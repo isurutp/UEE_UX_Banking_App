@@ -151,7 +151,7 @@
                         android:id="@+id/text_owner"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/empty_string"
+                        android:text="John Doe"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -189,7 +189,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="@string/empty_string"
+                        android:text="Koswatta"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -239,7 +239,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="@string/empty_string"
+                        android:text="0"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -278,7 +278,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="@string/empty_string"
+                        android:text="Personal"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -317,7 +317,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="@string/empty_string"
+                        android:text="0"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -352,11 +352,11 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/text_over_daft_limit"
+                        android:id="@+id/text_currency"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="@string/empty_string"
+                        android:text="LKR"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -400,7 +400,7 @@
                         android:id="@+id/text_interest"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/empty_string"
+                        android:text="0.9%"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -438,7 +438,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="@string/empty_string"
+                        android:text="0%"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -476,7 +476,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="@string/empty_string"
+                        android:text="0%"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
