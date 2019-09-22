@@ -56,5 +56,9 @@ public class Select_Account extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void menu(View view){
+        Intent intent = new Intent(this, menu_screen.class);
+        startActivity(intent);
+    }
 
 }

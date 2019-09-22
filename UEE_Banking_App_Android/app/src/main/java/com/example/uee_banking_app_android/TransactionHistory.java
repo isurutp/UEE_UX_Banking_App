@@ -47,22 +47,23 @@ public class TransactionHistory extends AppCompatActivity {
 
     private void setFilterPosition(String key){
         ArrayList positions = new ArrayList<Number>();
-        for(int i = 0; i >= type.size(); i++){
-            if(type.get(i).matches("(.*)"+ key +"(.*)")||
-            payment.get(i).matches("(.*)"+ key +"(.*)")  ||
-            balance.get(i).matches("(.*)"+ key +"(.*)")  ||
-            amount.get(i).matches("(.*)"+ key +"(.*)") ||
-            date.get(i).matches("(.*)"+ key +"(.*)")){
+        for(int i = 0; i < type.size(); i++){
+            if(type.get(i).equals(key)||
+            payment.get(i).contains(key)  ||
+            balance.get(i).contains(key) ||
+            amount.get(i).contains(key)  ||
+            date.get(i).contains(key) ){
                 positions.add(i);
             }
         }
         this.positions = positions;
+
     }
 
     private ArrayList alterArray(ArrayList arr){
 
         ArrayList arrayList = new ArrayList();
-        for(int i = 0; i >= arr.size(); i++){
+        for(int i = 0; i < arr.size(); i++){
             if(positions.contains(i)){
                 arrayList.add(arr.get(i));
             }
@@ -473,6 +474,11 @@ public class TransactionHistory extends AppCompatActivity {
                 alterArray(payment), alterArray(amount), alterArray(balance), alterArray(date));
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    public void menu(View view){
+        Intent intent = new Intent(this, menu_screen.class);
+        startActivity(intent);
     }
 
 

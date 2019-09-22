@@ -31,13 +31,8 @@ public class Create_Account_page2 extends AppCompatActivity {
         currency =  findViewById(R.id.text_currency);
 
         pageTwoData = new String[8];
-
         Bundle bundle = getIntent().getExtras();
         pageOneData = bundle.getStringArray("pageOneData");
-
-
-
-
     }
 
 

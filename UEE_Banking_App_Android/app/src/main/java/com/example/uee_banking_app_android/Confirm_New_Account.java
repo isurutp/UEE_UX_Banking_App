@@ -3,6 +3,7 @@ package com.example.uee_banking_app_android;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -35,7 +36,7 @@ public class Confirm_New_Account extends AppCompatActivity {
         pageTwoData = bundle.getStringArray("pageTwoData");
 
         name = findViewById(R.id.header);
-        //owner = findViewById(R.id.text_owner);
+        owner = findViewById(R.id.text_owner);
         branch = findViewById(R.id.text_branch);
         currency = findViewById(R.id.text_currency);
         interest = findViewById(R.id.text_interest);
@@ -51,15 +52,15 @@ public class Confirm_New_Account extends AppCompatActivity {
 
     private void init(){
         name.setText(pageTwoData[0]);
-//        owner.setText("John Doe");
-//        branch.setText(pageOneData[2]);
-//        currency.setText(pageTwoData[2]);
-//        interest.setText(pageTwoData[5]);
-//        type.setText(pageTwoData[1]);
-//        CLimit.setText(pageTwoData[3]);
-//        dLimit.setText(pageTwoData[4]);
-//        cInterest.setText(pageTwoData[7]);
-//        dInterest.setText(pageTwoData[6]);
+        owner.setText("John Doe");
+       // branch.setText(pageOneData[2].isEmpty() ? "Koswatta" : pageOneData[2]);
+        currency.setText(pageTwoData[2]);
+        interest.setText(pageTwoData[5]);
+        type.setText(pageTwoData[1]);
+        CLimit.setText(pageTwoData[3]);
+        dLimit.setText(pageTwoData[4]);
+        cInterest.setText(pageTwoData[7]);
+        dInterest.setText(pageTwoData[6]);
     }
 
 
@@ -81,12 +82,22 @@ public class Confirm_New_Account extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Confromation Message");
         builder.setMessage("Account Repuest has been made an e-mail will be sent to your email within 3 to 5 working days");
-        builder.setPositiveButton("confirm", null);
+        builder.setPositiveButton("confirm", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                next();
+            }
+        });
         builder.show();
+
+    }
+    public void cancel(View view){
         Intent intent = new Intent(this, Select_Account.class);
         startActivity(intent);
     }
-    public void cancel(View view){
+
+
+    void next(){
         Intent intent = new Intent(this, Select_Account.class);
         startActivity(intent);
     }
