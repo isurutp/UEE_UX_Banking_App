@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 
 import com.example.uee_banking_app_android.util.RecycerViewAdapterTHistory;
 
@@ -19,11 +22,13 @@ public class TransactionHistory extends AppCompatActivity {
     ArrayList<String>  balance;
     ArrayList<String>  date;
     ArrayList<Number>  positions;
+    EditText search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaction_history);
+        search = findViewById(R.id.text_search);
         init();
         initValues();
         initRecyclerView();
@@ -39,9 +44,6 @@ public class TransactionHistory extends AppCompatActivity {
     }
 
 
-    private void filter(){
-
-    }
 
     private void setFilterPosition(String key){
         ArrayList positions = new ArrayList<Number>();
@@ -57,11 +59,22 @@ public class TransactionHistory extends AppCompatActivity {
         this.positions = positions;
     }
 
-    private void alterArray(){
+    private ArrayList alterArray(ArrayList arr){
 
+        ArrayList arrayList = new ArrayList();
+        for(int i = 0; i >= arr.size(); i++){
+            if(positions.contains(i)){
+                arrayList.add(arr.get(i));
+            }
+        }
+
+        return arrayList;
     }
 
-
+    public void openTrans(View view){
+        String key = search.getText().toString().trim();
+        filterRecyclerView(key);
+    }
 
     private void initValues(){
         //
@@ -453,10 +466,11 @@ public class TransactionHistory extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
-    private void filterRecyclerView() {
+    private void filterRecyclerView(String key) {
+        setFilterPosition(key);
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        RecycerViewAdapterTHistory adapter = new RecycerViewAdapterTHistory(this, type,
-                payment, amount, balance, date);
+        RecycerViewAdapterTHistory adapter = new RecycerViewAdapterTHistory(this, alterArray(type),
+                alterArray(payment), alterArray(amount), alterArray(balance), alterArray(date));
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }

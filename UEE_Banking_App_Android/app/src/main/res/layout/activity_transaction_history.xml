@@ -38,6 +38,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/logo"
                     app:layout_constraintVertical_bias="0.4" />
 
+
                 <ImageView
                     android:id="@+id/logo_background"
                     android:layout_width="0dp"
@@ -47,19 +48,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@color/logo_background" />
-
-                <ImageView
-                    android:id="@+id/imageView17"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@color/see_through_background"
-                    app:layout_constraintBottom_toTopOf="@+id/recycler_view"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/logo"
-                    app:layout_constraintVertical_bias="0.52"
-                    app:srcCompat="@drawable/more_button" />
 
                 <ImageView
                     android:id="@+id/logo"
@@ -84,14 +72,17 @@
 
                 </androidx.recyclerview.widget.RecyclerView>
 
-                <TextView
+                <EditText
                     android:id="@+id/text_search"
+                    android:background="@color/see_through_background"
+                    android:inputType="textPersonName|text"
+                    android:maxLines="1"
+                    android:paddingTop="4dp"
+                    android:textColor="@color/Black"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:editable="true"
                     android:hint="Filter Items"
                     android:paddingStart="14dp"
-                    android:paddingTop="8dp"
                     android:textColorHint="@color/default_light_gray_background"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView18"
@@ -99,15 +90,16 @@
                     app:layout_constraintStart_toStartOf="@+id/imageView18"
                     app:layout_constraintTop_toTopOf="@+id/imageView18" />
 
-                <ViewStub
-                    android:id="@+id/viewStub"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout="@layout/transaction_history_filter_items"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/recycler_view"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+                <Button
+                    android:id="@+id/imageView"
+                    android:layout_width="38dp"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@android:drawable/ic_search_category_default"
+                    android:onClick="openTrans"
+                    app:layout_constraintEnd_toEndOf="@+id/text_search"
+                    app:layout_constraintTop_toTopOf="@+id/text_search"
+                    app:srcCompat="@android:drawable/ic_search_category_default" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

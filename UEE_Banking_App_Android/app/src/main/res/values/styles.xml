@@ -3,6 +3,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/Black</item>
         <item name="colorPrimary">#E19F1A</item>
         <item name="colorPrimaryDark">#E19F1A</item>
         <item name="colorAccent">#E19F1A</item>

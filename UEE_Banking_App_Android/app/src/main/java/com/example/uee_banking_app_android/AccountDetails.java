@@ -82,6 +82,7 @@ public class AccountDetails extends AppCompatActivity {
 
     public void openTrans(View view){
         Intent intent = new Intent(this, TransactionHistory.class);
+
         startActivity(intent);
     }
 }
