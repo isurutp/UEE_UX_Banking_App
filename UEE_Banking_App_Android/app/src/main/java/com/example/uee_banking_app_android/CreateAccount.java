@@ -16,7 +16,7 @@ public class CreateAccount extends AppCompatActivity {
 
 
 
-    private String[] pageOneData = new String[3];
+    private String[] pageOneData;
 
 
     @Override
@@ -26,6 +26,8 @@ public class CreateAccount extends AppCompatActivity {
         owner = findViewById(R.id.text_name);
         nic = findViewById(R.id.text_nic);
         branch = findViewById(R.id.text_branch);
+
+        pageOneData = new String[3];
     }
 
     public void openNext(View view){

@@ -87,7 +87,7 @@
 
 
                 <EditText
-                    android:id="@+id/text_branch"
+                    android:id="@+id/text_branch2"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:background="@color/see_through_background"
@@ -102,39 +102,6 @@
                     app:layout_constraintEnd_toEndOf="@id/branch_field"
                     app:layout_constraintStart_toStartOf="@id/branch_field"
                     app:layout_constraintTop_toTopOf="@id/branch_field" />
-
-                <EditText
-                    android:id="@+id/text_nic"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:background="@color/see_through_background"
-                    android:hint="@string/nic"
-                    android:inputType="textCapSentences"
-                    android:paddingStart="20dp"
-                    android:paddingTop="4dp"
-                    android:textColor="@color/Black"
-                    android:textColorHint="@color/default_project_background"
-                    app:layout_constraintBottom_toBottomOf="@id/nic_field"
-                    app:layout_constraintEnd_toEndOf="@id/nic_field"
-                    app:layout_constraintStart_toStartOf="@id/nic_field"
-                    app:layout_constraintTop_toTopOf="@id/nic_field" />
-
-                <EditText
-                    android:id="@+id/text_name"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:background="@color/see_through_background"
-                    android:hint="@string/name"
-                    android:inputType="textPersonName|text"
-                    android:maxLines="1"
-                    android:paddingStart="20dp"
-                    android:paddingTop="4dp"
-                    android:textColor="@color/default_project_background"
-                    android:textColorHint="@color/default_project_background"
-                    app:layout_constraintBottom_toBottomOf="@id/name_field"
-                    app:layout_constraintEnd_toEndOf="@id/name_field"
-                    app:layout_constraintStart_toStartOf="@id/name_field"
-                    app:layout_constraintTop_toTopOf="@id/name_field" />
 
                 <ImageView
                     android:id="@+id/branch_field"
@@ -190,6 +157,56 @@
                     android:textSize="25dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/nic_field" />
+
+                <EditText
+                    android:id="@+id/text_branch"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/see_through_background"
+                    android:hint="defualt - Koswatta"
+                    android:inputType="text|textCapSentences"
+                    android:maxLines="1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="4dp"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/default_project_background"
+                    app:layout_constraintBottom_toBottomOf="@id/branch_field"
+                    app:layout_constraintEnd_toEndOf="@id/branch_field"
+                    app:layout_constraintStart_toStartOf="@id/branch_field"
+                    app:layout_constraintTop_toTopOf="@id/branch_field" />
+
+                <EditText
+                    android:id="@+id/text_nic"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/see_through_background"
+                    android:hint="@string/nic"
+                    android:inputType="textCapSentences"
+                    android:paddingStart="20dp"
+                    android:paddingTop="4dp"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/default_project_background"
+                    app:layout_constraintBottom_toBottomOf="@id/nic_field"
+                    app:layout_constraintEnd_toEndOf="@id/nic_field"
+                    app:layout_constraintStart_toStartOf="@id/nic_field"
+                    app:layout_constraintTop_toTopOf="@id/nic_field" />
+
+                <EditText
+                    android:id="@+id/text_name"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/see_through_background"
+                    android:hint="@string/name"
+                    android:inputType="textPersonName|text"
+                    android:maxLines="1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="4dp"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/default_project_background"
+                    app:layout_constraintBottom_toBottomOf="@id/name_field"
+                    app:layout_constraintEnd_toEndOf="@id/name_field"
+                    app:layout_constraintStart_toStartOf="@id/name_field"
+                    app:layout_constraintTop_toTopOf="@id/name_field" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
