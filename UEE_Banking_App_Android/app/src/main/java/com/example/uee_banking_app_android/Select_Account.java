@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.uee_banking_app_android.util.RecyclerViewAdapterAccountCard;
 
@@ -57,6 +58,12 @@ public class Select_Account extends AppCompatActivity {
     }
 
     public void menu(View view){
+        Intent intent = new Intent(this, menu_screen.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed(){
         Intent intent = new Intent(this, menu_screen.class);
         startActivity(intent);
     }

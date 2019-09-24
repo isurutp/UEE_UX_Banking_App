@@ -149,8 +149,8 @@
 
     <TextView
         android:id="@+id/textView27"
-        android:layout_width="14dp"
-        android:layout_height="6dp"
+        android:layout_width="26dp"
+        android:layout_height="21dp"
         android:background="@drawable/hamburger_menu"
         android:clickable="true"
         android:onClick="mainMenu"

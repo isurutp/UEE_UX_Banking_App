@@ -24,6 +24,7 @@ public class AccountDetails extends AppCompatActivity {
     public TextView dLimit;
     public TextView cInterest;
     public TextView dInterest;
+    public String accName;
 
 
     @Override
@@ -45,10 +46,10 @@ public class AccountDetails extends AppCompatActivity {
         dInterest = findViewById(R.id.text_debit_interest);
 
         Bundle bundle = getIntent().getExtras();
-        String name = bundle.getString("Name");
+        String accName = bundle.getString("Name");
 
 
-        if(name.equals("My Account")){
+        if(accName.equals("My Account")){
             this.name.setText("My Account");
             ref.setText("5DSGJ3264H");
             owner.setText("John Doe");
@@ -63,7 +64,7 @@ public class AccountDetails extends AppCompatActivity {
             cInterest.setText("24.9%");
             dInterest.setText("0.9%");
         }
-        else if(name.equals("My Savings")){
+        else if(accName.equals("My Savings")){
             this.name.setText("My Savings");
             ref.setText("SFS453SG54");
             owner.setText("John Doe");
@@ -82,7 +83,7 @@ public class AccountDetails extends AppCompatActivity {
 
     public void openTrans(View view){
         Intent intent = new Intent(this, TransactionHistory.class);
-
+        intent.putExtra("Name",accName);
         startActivity(intent);
     }
 

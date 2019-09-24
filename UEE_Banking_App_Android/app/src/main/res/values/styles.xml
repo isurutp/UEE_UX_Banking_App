@@ -8,6 +8,7 @@
         <item name="colorPrimaryDark">#E19F1A</item>
         <item name="colorAccent">#E19F1A</item>
 
+
 <!--        <item name="android:windowActivityTransitions">true</item>-->
 
 <!--        <item name="android:windowAnimationStyle">@style/WindowAnimationStyle</item>-->
@@ -15,6 +16,9 @@
 
     <style name ="account_background" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/background_account_bottom</item>
+        <item name="colorPrimary">#E19F1A</item>
+        <item name="colorPrimaryDark">#E19F1A</item>
+        <item name="colorAccent">#E19F1A</item>
     </style>
 
 <!--    <style name="WindowAnimationStyle">-->

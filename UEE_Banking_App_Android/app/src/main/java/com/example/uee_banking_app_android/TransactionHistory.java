@@ -4,14 +4,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.uee_banking_app_android.util.RecycerViewAdapterTHistory;
 
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class TransactionHistory extends AppCompatActivity {
 
@@ -23,15 +31,31 @@ public class TransactionHistory extends AppCompatActivity {
     ArrayList<String>  date;
     ArrayList<Number>  positions;
     EditText search;
+    Button searchButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaction_history);
         search = findViewById(R.id.text_search);
+        searchButton = findViewById(R.id.search_button);
+
         init();
         initValues();
         initRecyclerView();
+
+        search.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (event != null && ((event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {
+                    String key = search.getText().toString().trim();
+                    filterRecyclerView(key);
+                    InputMethodManager imm = (InputMethodManager)v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+
+                }
+                return false;
+            }
+        });
     }
 
     private void init(){
@@ -45,19 +69,19 @@ public class TransactionHistory extends AppCompatActivity {
 
 
 
+
     private void setFilterPosition(String key){
         ArrayList positions = new ArrayList<Number>();
+        key = key.trim();
         for(int i = 0; i < type.size(); i++){
-            if(type.get(i).equals(key)||
-            payment.get(i).contains(key)  ||
-            balance.get(i).contains(key) ||
-            amount.get(i).contains(key)  ||
-            date.get(i).contains(key) ){
+            if(type.get(i).matches("(?i:.*"+ key +"*)") ||
+            payment.get(i).matches("(?i:.*"+ key +"*)") ||
+            balance.get(i).equals(key) ||
+            amount.get(i).equals(key) ){
                 positions.add(i);
             }
         }
         this.positions = positions;
-
     }
 
     private ArrayList alterArray(ArrayList arr){
@@ -480,6 +504,20 @@ public class TransactionHistory extends AppCompatActivity {
         Intent intent = new Intent(this, menu_screen.class);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(this, Select_Account.class);
+        startActivity(intent);
+    }
+
+    public void back(View view){
+        Intent intent = new Intent(this, AccountDetails.class);
+        intent.putExtra("Name",getIntent().getExtras().getString("Name"));
+        startActivity(intent);
+    }
+
+
 
 
 }
