@@ -69,12 +69,11 @@
 
     <View
         android:id="@+id/view2"
-        android:layout_width="378dp"
-        android:layout_height="350dp"
-        app:layout_constraintBottom_toTopOf="@+id/submit"
+        android:layout_width="327dp"
+        android:layout_height="357dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.883" />
+        app:layout_constraintVertical_bias="0.686" />
 </androidx.constraintlayout.widget.ConstraintLayout>
